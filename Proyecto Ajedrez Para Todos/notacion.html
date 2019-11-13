@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Notación - Ajedrez Para Todos</title>
+</head>
+<body>
+    <h1 class="titulo">Notación</h1>
+    <div>
+        <p>
+            En este apartado vamos a explicar el sistema de notación ajedrecístico, por qué es importante conocerlo, cómo anotar partidas y por qué.
+            Antes de entrar en tema, vamos a hacer un ejercicio: te propongo que cierres tus ojos y pienses en los inicios del ajedrez, hace varios siglos. 
+            No había computadoras como hoy en día que lleven el registro de nuestras partidas, todo se hacía anotando manualmente y en base a esos 
+            primeros años hoy se conocen partidas antiquísimas y gran parte del conocimiento teórico que existe hoy es gracias al estudio de viejas partidas. 
+            Si bien es cierto que hoy en día los análisis por computadoras hacen prácticamente todo, en los torneos los jugadores siguen anotando sus 
+            partidas manualmente para guardar un registro en las bases de datos ajedrecísticas. El sistema que se utiliza para esto es la <strong>notación algebraica</strong>, 
+            un sistema que mediante coordenadas de las casillas y combinaciones de símbolos y letras para distinguir piezas y situaciones del juego, permite 
+            seguir toda la secuencia de la partida. Es importante que al menos conozcás bien las coordenadas, dado que en todo momento vas a leer que una 
+            pieza está en f6, por dar un ejemplo.
+        </p>
+        <p>
+            Ahora que hablamos un poco de la importancia histórica y actual de la conservación de las partidas y el método que usamos, empecemos a hablar de algo práctico: 
+            la totalidad de los chicos que conocí que juegan ajedrez pero no toman ningún tipo de clase ni lo estudian, no anotan sus partidas. Ante mi 
+            consulta del por qué de ésto recibí variadas respuestas: "no sabía que se anotan", "no le veo sentido", "me aburre", "es difícil". Básicamente 
+            fueron esas. Pensemos que sin anotar las partidas exceptuando que estemos jugando en un programa informático no tenemos manera de hacer un 
+            análisis posterior y saber qué hicimos bien, qué hicimos mal. El análisis de partidas es una de las herramientas más poderosas que tenemos a 
+            la hora de mejorar nuestro juego. Pero dejando de lado el hecho de la mejora, ¿no te gustaría tener para siempre registrada esa partida en la que 
+            realizaste un increíble sacrificio que acabo dándote la victoria? Pensalo. Entiendo que pueda resultar aburrido al principio, pero una vez 
+            que te acostumbrás a hacerlo sale de manera casi automática. Respecto a qué es difícil, bueno, para eso es que tenemos este apartado. Te voy 
+            a enseñar paso a paso como anotar partidas para que evites ese temor.
+        </p>
+    </div>
+    <div>
+        <p>
+            Anotar partidas en ajedrez es realmente muy sencillo. A esta altura deduzco que tenés más que sabido las coordenadas del tablero, en caso que 
+            no sea así, acá te dejo un tablero para que estudies sus casillas. Recordá que tenemos 8 columnas que van de la A a la H y 8 filas que van del 
+            1 al 8. El nombre da cada casilla es primero la letra de la columna y luego la fila, y con eso ya tenemos nuestra coordenada. <br>
+            <div class="cbdiagram"
+                data-size="420"
+                data-buttons="0"
+                data-fen="r1bqk2r/ppp1bBpp/2np1n2/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 b Qkq - 0 1">
+                </div>
+        </p>
+    </div>
+    <div>
+        <p>
+            Ahora que ya tenés las casillas sabidas, podemos comenzar a aprender como anotar. Primero empecemos por la la letra que identifica a 
+            cada pieza: <br>
+            <ul class="conceptosApertura">
+                <li><strong>Dama</strong>: identificada con la letra Q.</li>
+                <li><strong>Torre</strong>: identificada con la letra R.</li>
+                <li><strong>Rey</strong>: identificado con la letra K.</li>
+                <li><strong>Alfil</strong>: identificado con la letra B.</li>
+                <li><strong>Caballo</strong>: identificado con la letra N.</li>
+                <li><strong>Peón</strong>: identificados con la letra P.</li>
+           </ul>
+        </p>
+    </div>
+    <div>
+        <p>
+            ¡Excelente! Ya tenemos las coordenadas y las piezas, con esto ya estamos prácticamente listos para anotar nuestras jugadas. Para anotar 
+            un movimiento básico, primero ponemos la letra de la pieza que se mueve (si son peones, no ponemos la letra, es la excepción), y luego su 
+            casilla de destino. Por ejemplo: Ba4 indica que movemos nuestro alfil a b4. ¿Cuál de nuestros alfiles? Acá no hay confusiones dado que b4 es 
+            una casilla negra pero, ¿qué ocurre en el caso de torres o caballos? En principio la pieza que movemos es la única que puede llegar a esa casilla, 
+            pero supongamos que nuestras dos torres pueden ir a la misma casilla, para anotar correctamente tenemos que poner luego de la letra 'R' la 
+            letra de la columna donde está la torre que movemos, por ejemplo: Rab2. En este último ejemplo tenemos dos torres que pudieron ir a b2, por 
+            eso identificamos con la letra de la columna de la torre que efectivamente movimos. Siguiente con el ejemplo de las torres, pero no olvides 
+            que se aplica exactamente lo mismo para los caballos, en el caso que ambas estén en la misma columna y no en la misma fila, proseguimos exactamente 
+            igual que antes, sólo que en lugar de colocar la letra de la columna en la que estaba vamos a colocar el número de la fila, quedando algo así: 
+            R8a7. Acá movimos nuestra torre de la fila 8 a la casilla a7, anotamos así porque en alguna otra fila de la columna teníamos otra torre, que 
+            hubiese ocasionado confusión.
+        </p>
+    </div>
+    <div>
+        <p>
+            Ahora empecemos a terminar de pulir lo último que nos falta, algunos casos especiales: <br>
+            <ul class="conceptosApertura">
+                <li><strong>Peones</strong>: Como te dije antes, no anotamos la P en ningún momento. Una anotación c5 indica que movimos un peón a c5.</li>
+                <li><strong>Capturas</strong>: Cuando capturamos una pieza, simplemente añadimos 'x'(se lee "por") luego de la letra identificatoria de la pieza y la casilla a la que va. Por ejemplo: Qxc7 (se lee "dama por c7"). Acá movimos nuestra dama a c7 indicando que capturamos la pieza que allí estaba.</li>
+                <li><strong>Los jaques</strong>: Cuando un movimiento es jaque, debemos agregar un '+' al final. Ejemplo: Nxd4+ (leemos "caballo por d4 jaque"). En este último caso, movimos el caballo a d4, capturamos la pieza que había en esa casilla y dimos un jaque al rey adversario. En caso de ser jaque mate en lugar del '+' tenemos que colocar un '#'. Ejemplo: Rd8# (movemos la torre a d8 con jaque mate)</li>
+                <li><strong>Enroque</strong>: Para anotar el enroque es muy sencillo. Si es un enroque corto anotamos O-O. Si es largo O-O-O.</li>
+                <li><strong>Promoción</strong>: Para las promociones simplemente anotamos la mayúscula de la pieza que queremos a cambio del peón luego de la casilla en la que coronamos. Ejemplo: f8Q. En este ejemplo nuestro peón en f7 avanzó una casilla y coronamos en f8 obteniendo una dama.</li>
+            </ul>
+
+        </p>
+
+    </div>
+   <p> Como habrás visto, puede que al principio cueste un poco, pero no es nada difícil anotar partidas. El mejor consejo que te puedo dar es que antes de jugar 
+    tengas preparada una hoja con una pequeña tabla con dos columnas, una para las blancas y otras para las negras. En cada jugada anotamos primero que 
+    nada el número de la jugada, y luego simplemente la jugada como vimos. No dejes nunca una jugada para anotar por jugar apurado, luego son difíciles de recordar.
+    Por supuesto si estás jugando con controles de tiempo y éstos son ritmos rápidos, no va a ser posible que anotes (depende que tan serio sea el torneo, habrá un árbitro que se ocupe de eso), pero en todas tus otras partidas 
+    te aconsejo que por más que te cueste pongas todo tu empeño. Esta herramienta en su momento me sirvió muchísimo para mejorar. Si venís directamente 
+    desde el reglamento, si empezás a jugar tus partidas anotando no sólo se va a convertir e un hábito, sino que tu curva de aprendizaje va a 
+    ser mucho más grande. Para cerrar este tema, te dejo como se vería una serie por ejemplo, una variante de la apertura española en notación 
+    (de todas formas cuando subimos fragmentos de partidas también podés chequear esto): <br>
+    1. e4 e5 <br>
+    2. Nf3 Nc6 <br>
+    3. Bb5 a6 <br>
+    4. Ba4 b5 <br>
+    
+    Es muy importante que te familiarices con las coordenadas, aún si no anotás las partidas este tema tiene que estar sabido porque lo usamos todo 
+    el tiempo. ¡Nos vemos en otras secciones!
+    </p>
+    <link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css">
+    <script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+    <script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>
+</body>
+</html>

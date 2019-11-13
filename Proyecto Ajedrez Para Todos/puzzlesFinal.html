@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Puzzles en Finales - Ajedrez Para Todos</title>
+</head>
+<body>
+        <h1 class="titulo">Puzzles en Finales</h1>
+        <p>
+            En su momento hablamos de la importancia de la táctica en ajedrez, de los conceptos de cálculo, de amenazas, de ataques dobles, etc. En 
+            ese momento ya comentábamos que una de las mejores formas para entrenar este tipo de cuestiones es con los puzzles. Por eso te propongo 
+            está sección donde preparo diferentes puzzles para cada etapa del juego con el objetivo que empieces a ver distintos temas tácticos y 
+            puedas descubrirlo. Como habrás visto en la web principal, cada día hay un puzzle diferente pero sin una temática en especial, acá la 
+            mecánica es la misma, sólo que nos enfocaremos en <strong>puzzles en el finales</strong>. Vas a encontrar nuevos puzzles cada semana, 
+            además del que encontrás cada día en la página principal. El funcionamiento es el mismo: con click al salvavidas recibís una pista, y click 
+            al semáforo te da la solución. Luego podés ver la explicación.
+        </p>
+        <section class="puzzles">
+            <section class="puzzle1">
+                    <div class="cbdiagram"
+                    data-size="420"
+                    data-fen="8/8/1p3kpp/1BP5/1P6/3n1PP1/r6P/5KR1 b K - 0 1"
+                    data-legend="Juegan las negras y dan mate."
+                    data-hint="A veces las piezas amigas pueden perjudicarnos..."
+                    data-solution="a2f2">
+                  </div>
+                  <h4 class="solucion">Click <a href="javascript:mostrarSolu();">acá</a> para ver la explicación.</h4>
+                  <p id="explicacion5" style="display: none;">Bueno espero que hayas visto la jugada Rf2#. Como vemos en la posición, el caballo cubre la casilla de escape del rey y a su vez defiende a la torre, un hermoso ejemplo de piezas coordinadas. En el otro bando la situación es radicalmente distinta, la torre blanca no sólo no está haciendo nada, si no que termina ocupando una posible casilla de escape de su rey y propiciando la jugada de mate.</p>
+            </section>
+    
+            <section class="puzzle2">
+                    <div class="cbdiagram"
+                    data-size="420"
+                    data-fen="4R3/6p1/6kp/8/4N3/7P/4q1PK/8 w - - 0 1"
+                    data-legend="Juegan las blancas y ganan la dama."
+                    data-hint="El caballo puede parecer clavado por la dama negra, pero al mismo tiempo puede propiciar un ataque descubierto de la torre."
+                    data-solution="e8e6">
+                  </div>
+                  <h4 class="solucion">Click <a href="javascript:mostrar();">acá</a> para ver la explicación.</h4>
+                  <p id="explicacion6" style="display: none;">Como dice la pista, si bien es cierto que el caballo está clavado por la dama, vemos como con una simple maniobra podemos aprovechar para dar un golpe de ko al jugador negro con un feroz descubierto. Si se juega Re6+, y podés comoprobarlo vos mismo, vaya a donde vaya el rey, el caballo puede moverse y dar un jaque y al mismo tiempo liberar la acción de la torre sobre la dama, otra vez volvemos a la doble amenaza, el negro tiene que salir del jaque por lo que su dama está perdida. La mejor jugada del negro es Kf5, dado que así puede al menos cambiar la dama por la torre y, si bien un jugador con algo de técnica va a ganar ese final de caballo y dos peones contra dos peones, es mucho más factible luchar por la igualdad en ese escenario que contra una torre, como sería con cualquier otro movimiento después de Re6+.</p>
+            </section>
+    
+        </section>
+    
+        <link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css">
+        <script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+        <script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>
+        <script languague="javascript">
+                function mostrarSolu() {
+                    p = document.getElementById('explicacion5');
+                    p.style.display = '';
+                }
+                function mostrar() {
+                    p = document.getElementById('explicacion6');
+                    p.style.display = '';
+                }
+        </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css">
+    <script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+    <script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>
+    <title>Reglamento - Ajedrez Para Todos</title>
+</head>
+<body>
+    <h1 class="titulo">Reglamento</h1>
+<div>
+    <p>
+        Dejame darte la bienvenida una vez más a <strong>Ajedrez Para Todos</strong>. Si llegaste a esta sección es porque estás interesado en 
+        aprender a jugar al ajedrez. En principio te felicito por tu iniciativa, y en segundo lugar te puedo asegurar que vas a amar este juego. 
+        Voy a intentar ser totalmente claro en las explicaciones, pero si un concepto no se comprende del todo, tené por seguro que se va a comprender 
+        a medida que juegues. Vamos a comenzar, ¿dale?
+    </p>
+    <p>
+        <strong>Artículo 1</strong>: naturaleza y objetivos de la partida de ajedrez. <br><br>
+        1.1: La partida de ajedrez se juega entre dos adversarios que mueven sus piezas sobre un tablero de 64 casillas dispuestas en 8x8, intercaladas de una 
+        en una con colores blanco y negro donde a1 es negro. Las 8 hileras verticales se denominan "columnas", y las 8 horizontales "filas". <br>
+            
+        1.2: El jugador que tiene las piezas blancas realiza la primera jugada, luego los jugadores mueven en forma alternada, el jugador que tiene las 
+        piezas negras realiza la siguiente jugada. <br>
+            
+        1.3: Se dice que a un jugador "le toca mover" cuando su adversario ha jugado. <br>
+            
+        1.4: El objetivo de cada jugador es situar al rey adversario en "jaque mate", de tal forma que el adversario no disponga de ninguna jugada legal. <br>
+            
+        1.4.1: No está permitido dejar al propio rey bajo ataque, ni exponerlo al ataque ni tampoco "capturar" el rey adversario. <br>
+            
+        1.4.2: El jugador cuyo rey ha recibido el mate pierde la partida. <br>
+            
+        1.5: Si la posición es tal que a ninguno de los jugadores le es posible dar mate al rey del adversario, la partida es tablas (ver Artículo 5.2.2). <br>
+    </p>
+    <p>
+        <strong>Artículo 2</strong>: la posición inicial de las piezas en el tablero. <br><br>
+        2.1: Cada jugador dispone de un set de 16 piezas catalogadas del siguiente modo: <br>
+        <ul class="conceptosApertura">
+            <li>8 peones.</li>
+            <li>2 torres.</li>
+            <li>2 alfiles.</li>
+            <li>2 caballos.</li>
+            <li>1 dama.</li>
+            <li>1 rey.</li>
+        </ul>
+
+        La disposición de las piezas al inicio de la partida es la siguiente: 
+        <div class="cbdiagram"
+                    data-size="420"
+                    data-buttons="0"
+                    data-fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
+        </div>
+
+     </p>
+     <p>
+         <strong>Artículo 3</strong>: el movimiento de las piezas. <br><br>
+         3.1: No está permitido mover una pieza nuestra a una casilla dónde tenemos otra. <br>
+         3.2: Si movemos una pieza nuestra a la casilla dónde hay una del adversario capturamos o "comemos" esa pieza y se la retira del juego. <br>
+         3.3: El alfil puede moverse a cualquier casilla sobre las diagonales en las que se encuentra siempre y cuando no haya otra pieza que obstruya el camino. 
+         Si así ocurriese, si es una pieza rival llega hasta esa casilla capturando, y si es una pieza aliada llega hasta la casilla anterior. <br>
+         3.4: La regla con la torre es igual a con el alfil, sólo que mueve en horizontal y vertical. <br>
+         3.5: La dama reúne las características de torre y alfil, moviéndose la cantidad de casillas que quiera tanto en horizontal como vertical y diagonal. <br>
+         3.6: El caballo hace un movimiento en forma de "L", avanzando dos casillas, una en diagonal y la restante en horizontal o vertical. 
+         Una particularidad del caballo es que es la única pieza que puede pasar por encima de las otras (aliadas o enemigas) en su movimiento. <br>
+         3.7: El rey se mueve en cualquier dirección pero solo de a una casilla por vez. Recordá que no puede ponerse bajo ataque y que no puede colocarse 
+         en ninguna casilla adyacente al rey rival. Sólo una vez por partida, y si no está en jaque, no se ha movido ni tiene una pieza en el camino, 
+         el rey puede desplazarse dos casillas hacia su izquierda o derecha, y colocar una torre en la casilla por la que acaba de pasar, este movimiento 
+         se llama "enroque". Tampoco puede realizarlo si las casillas por las que pasaría están bajo ataque o si la torre con la que lo haría ya se ha 
+         movido. <br>
+         3.8: Los peones presentan la particularidad que avanzan solo hacia adelante, pero para capturar lo hacen en diagonal. En su primera jugada pueden 
+         avanzar dos casillas. Si un peón llega a la última fila, se dice que "corona", y el jugador puede escoger cambiarlo por cualquiera de las otras 
+         piezas.
+         3.9: Decimos que el rey está en "jaque" cuando está bajo ataque. No podemos terminar nuestro turno con el rey en jaque, ni tampoco podemos 
+         mover una pieza que nos deje en jaque, son jugadas ilegales. <br><br>
+         A continuación te dejo una partida de demostración para que veas todas las piezas en acción, jugadas como el enroque, las capturas, y las 
+         coronaciones. Prestá especial atención a cuando los reyes quedan en jaque que deben salir de él. En el final, el jugador blanco da jaque mate, dado que el negro no tiene como salir del jaque. <br>
+         <div class="cbreplay">
+                [Event "Partida demostrativa."]
+                1. e4 b6 2. d3 f6 3. f4 Bb7 4. Be3 e5 5. fxe5 Bxe4 6. dxe4 Nc6 7. Ne2 Nce7 8. Nec3 Nh6 9. Na3 Nc6 10. Qh5+ Nf7 11. exf6 Qxf6 12. Ba6 Qd6 13. Qh3 Nce5 14. O-O Ng5 15. Bxg5 Be7 16. Nc4 Nxc4 17. Bxc4 O-O-O 18. Qxh7 Rxh7 19. Rf7 Rf8 20. Raf1 Rxf7 21. Rxf7 Qd5 22. Nxd5 Rh5 23. Bxe7 c6 24. e5 cxd5 25. Rxg7 Rg5 26. Bb5 Rxg7 27. Ba6+ Kc7 28. Bb4 d6 29. e6 Rxg2+ 30. Kxg2 d4 31. e7 d3 32. e8=Q dxc2 33. Qe7+ Kb8 34. Qd8#
+            </div> 
+     </p>
+     <p>
+            <strong>Artículo 4</strong>: La finalización de la partida. <br><br>
+            4.1: La partida es ganada por el jugador que ha dado mate al rey adversario. Esto pone fin a la partida de inmediato, siempre que la 
+            jugada que generó la posición de mate estuviera de acuerdo con una jugada legal. <br>
+            4.2: La partida es ganada por el jugador cuyo adversario declara que abandona o se rinde. Esto pone fin a la partida de inmediato. <br>
+            4.3: La partida es tablas o empate cuando el jugador a quien le toca mover no puede hacer ninguna jugada legal y su rey no está en 
+            jaque. Se dice entonces que el rey está "ahogado". Esto pone fin a la partida de inmediato. <br>
+            4.4: La partida es tablas cuando se alcanza una posición en la que ningún jugador puede dar mate al rey adversario con ninguna sucesión de jugadas legales. 
+            Esto pone fin a la partida de inmediato. <br>
+            4.5: La partida es tablas por acuerdo entre los dos jugadores durante el desarrollo del juego, siempre y cuando ambos jugadores hayan 
+            realizado al menos un movimiento. Esto pone fin a la partida de inmediato.
+     </p>
+     <p>
+         Como podés ver, aprender la mecánica del juego es realmente simple. Te invito a que te familiarices con los movimientos de las piezas y 
+         las reglas clave del juego como los jaques, no pasar por encima piezas salvo que sea con un caballo, etc. Una vez que te sientas cómodo 
+         te espero en el apartado de los fundamentos básicos, donde empezaremos a aprender cómo jugar bien al ajedrez.
+     </p>
+        
+
+</div>
+</body>
+</html>

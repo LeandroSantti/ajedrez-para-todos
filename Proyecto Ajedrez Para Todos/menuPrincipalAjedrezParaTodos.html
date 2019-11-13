@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css">
+        <title>Inicio - Ajedrez Para Todos</title>
+        </head>
+    <body>
+        
+          <nav class="navMenuPrincipal">
+              <ul>
+                  <li><a >Inicio</a></a>
+                     <ul>
+                         <li><a href="quienesSomos.html"target="_blank">¿Quiénes Sómos?</a></li>
+                         <li><a href="reglamento.html"target="_blank">Reglamento</a></li>
+                         <li><a href="notacion.html"target="_blank">Notación</a></li>
+                         <li><a href="notas.html"target="_blank">Notas y Actualidad</a></li>
+                     </ul>
+                  </li>
+                  <li><a >Fundamentos Básicos</a>
+                    <ul>
+                      <li><a href="apertura.html"target="_blank">Apertura</a></li>
+                      <li><a href="medioJuego.html"target="_blank">Medio Juego</a></li>
+                      <li><a href="final.html"target="_blank">Final</a></li>
+                      <li><a href="calculo.html"target="_blank">Cálculo</a></li>
+                      <li><a href="tactica.html"target="_blank">Táctica</a></li>
+                      <li><a href="estrategia.html"target="_blank">Estrategia</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="lecciones.html" target="_blank">Lecciones</a></li>
+                  <li><a >Puzzles</a>
+                    <ul>
+                      <li><a href="puzzlesAperturas.html"target="_blank">Aperturas</a></li>
+                      <li><a href="puzzlesMediojuego.html"target="_blank">Medio Juego</a></li>
+                      <li><a href="puzzlesFinal.html"target="_blank">Finales</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="literatura.html" target="_blank">Literatura</a></li>
+                  <li><a href="analisis.html" target="_blank">Análisis de Partidas</a></li>
+                  <li><a >Para los Padres</a>
+                    <ul>
+                        <li><a href="proyecto.html"target="_blank">Proyecto</a></li>
+                        <li><a href="entrevista.html"target="_blank">Entrevistas</a></li>
+                    </ul>
+                </li>
+                  <li><a >Más</a>
+                    <ul>
+                        <li><a href="curiosidades.html"target="_blank">Curiosidades</a></li>
+                        <li><a href="informacionUtil.html"target="_blank">Información Útil</a></li>
+                        <li><a href="agradecimientos.html"target="_blank">Agradecimientos</a></li>
+                        <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                        
+                    </ul>
+                </li>
+              </ul>
+          </nav>
+
+          <section class="mainPage">
+            <section class="mainPageNota">
+              <h3 class="tituloNotas">Novedades:</h3>
+              <h2 class="tituloNotas">¡Otra vez Magnus! El Campeón del Mundo gana con contundencia en su tierra.</h2>
+              <h4 class="pieDeTituloNotas">Publicado el 01/07/2019 a las 19:48 hs.</h4>
+              <p>Quizás sin la autoridad que demostró en los últimos torneos pero ganando con claridad y una ronda antes del cierre, el Campeón Mundial de
+                 Ajedrez, el noruego Magnus Carlsen, se consagró campeón en el Norway Chess 2019 gracias a su increíble forma en el ajedrez rápido, donde volvió
+                 a evidenciar una clara superioridad respecto a sus rivales. Magnus ganó tan solo dos partidas de ajedrez clásico, empatando el resto, pero arrasó ganando todas sus partidas en la modalidad 
+                 armaggedon, exceptuando la que disputó contra Fabiano Caruana, su retador al título del mundo el año anterior en Londres, con el torneo ya resuelto.
+                 En medio de los debates por la nueva modalidad del torneo, Magnus repite la costumbre y vuelve a ganar como local, como lo viene
+                 haciendo hace 7 años.</p>
+                 <h4 class="pieDeTituloNotas"><a href="notas.html" target="_blank">Leé acá la nota completa.</a></h4>
+
+                 <img class="magnusCarlsenimg" src="Imagenes/carlsen.jpg" alt="Magnus Carlsen, campeón en Noruega">
+                 <h5 class="pieDeTituloMagnus">Magnus Carlsen, otra vez campeón en Noruega</h5>
+            </section>
+            <section class="puzzleDelDia">
+              <h3 class="instruccionesPuzzleDelDia">Puzzle del día:</h3>
+              <h4 class="instruccionesPuzzleDelDia">Juegan las negras y ganan. Dale click al salvavidas para una pista o click al semáforo para la solución.</h4>
+              <div class="cbdiagram"
+                data-size="420"
+                data-fen="rnbqk1nr/pp3ppp/2p5/8/1bB1P3/2p2N2/PP4PP/RNBQK2R b KQkq - 0 1"
+                data-legend="Juegan las negras y ganan."
+                data-hint="Pensá en los ataques descubiertos."
+                data-solution="c3c2">
+              </div>
+              <h4 class="instruccionesPuzzleDelDia">Click <a href="javascript:mostrar();">acá</a> para ver la explicación.</h4>
+              <p id="explicacion" style="display: none;">En este puzzle la posición del blanco está totalmente perdida, hay muchas jugadas que tarde o temprano van a ganar la partida, pero el avance c2+ es fuertísimo dado que con el jaque descubierto se gana la dama a la siguiente jugada sin importar lo que mueva el blanco. </p>
+            </section>
+          </section>
+          
+
+      
+          <link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css">
+          <script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+          <script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>
+          <script languague="javascript">
+              function mostrar() {
+                  p = document.getElementById('explicacion');
+                  p.style.display = '';
+              }
+      </script>
+    </body>
+</html>

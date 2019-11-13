@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cálculo - Ajedrez Para Todos</title>
+</head>
+<body>
+    <h1 class="titulo">Cálculo</h1>
+    <div>
+        <p>
+           En esta sección vamos a estar hablando un poco del <strong>cálculo</strong> en el ajedrez. El cálculo es fundamental en toda partida de 
+           ajedrez y, al igual que cualquier otra faceta del juego, se puede entrenar, mejorar y cometer errores. ¿De qué hablamos cuándo decimos 
+           "cálculo"? Bueno, se trata justamente de calcular variantes ante una determinada posición. En mi opinión este es el rubro del ajedrez más importante. 
+           Sí, conocer de táctica es importante, lo mismo que la estrategia y lo mismo que la teoría de finales, pero de nada sirve si no podemos calcular 
+           correctamente una serie de jugadas. Si es nuestro turno de mover, cabe primeramente valorar la posición como ya hemos visto antes, y comenzar a pensar qué movemos, cómo atacamos, cómo mejoramos la posición, cómo defendemos esa 
+           casilla que nos ha quedado débil, etc. Allí ya estamos calculando. Estamos visualizando algo en el tablero que todavía no ha ocurrido. Por supuesto 
+           que para el que el cálculo sea correcto y eficiente no podemos quedarnos sólo en nuestra jugada: también tenemos que calcular las posibles respuestas 
+           de nuestro oponente y, en base a ese cálculo determinar que jugada es mejor. Tenemos que imaginar en nuestra cabeza una posición a la que todavía 
+           no se ha llegado, anticiparnos a los movimientos que están por ocurrir y visualizar distintos escenarios futuros. Es muy frecuente en jugadores 
+           que no tienen mucha experiencia en el juego un cálculo prácticamente nulo, que no abarca más de una o dos jugadas, sin analizar otras y mucho menos 
+           respuestas del rival. El cálculo por si solo va apareciendo a medida que jugás, aunque no conozcas el concepto, pero te lo digo desde mi 
+           experiencia, cuando pude descubrir de qué hablamos cuando hablamos de cálculo tuve una mejor brutal en mi juego en muy poco tiempo. En la sección 
+           de <a href="puzzlesAperturas.html" target="_blank">puzzles</a> voy a ir subiendo a medida que vayamos avanzando con las lecciones ejercicios cada vez más complejos en los que hay 
+           que calcular cada vez más profundo. Pero no nos adelantemos tanto. Para que quede en claro el concepto, te voy a mostrar la siguiente posición. <br> 
+           En este ejemplo vemos como el jugador de blancas tenía una variante ganadora, y la comenzó como era debido con la jugada caballo hxc3 con jaque. 
+           El negro acertadamente captura y luego el blanco vuelve a tomar con su otro caballo, lo cual es totalmente correcto. El negro por supuesto sólo puede 
+           jugar ahora rey f8, dado que cualquier otra jugada terminaría en el acto la partida con dama h7 jaque mate. Ante esa jugada el blanco comete el error 
+           que pierde la partida y juega de todas maneras dama h7, quizás precipitándose al ataque pero descuidando por completo la jugada ganador del negro: 
+           caballo por c3 jaque, ganando en el acto la torre y abriendo la columna para sus piezas mayores. El mate sólo es cuestión de algunas jugadas más, 
+           pero no nos interesa llegar a eso, en este punto sólo trato de mostrarte como una posición ya ganada, con un simple error de cálculo por 
+           descuidar las jugadas del rival acaba por perder la partida.
+
+           <div class="cbreplay">
+                [Event "Error de cálculo. El blanco omite jugada del rival."]
+                [FEN "r3r1k1/1pq2pp1/p2np2p/1n5N/3PN1PP/1PPQP3/P7/1K1R1R2 w KQkq -"]
+                1. Nhf6+ gxf6 2. Nxf6+ Kf8 3. Qh7 Nxc3+ 4. Kb2 Nxd1+ 5. Rxd1 Rec8
+            </div>
+        </p>
+    </div>
+    <div>
+        <p>
+            Ya tenemos una base de qué es el cálculo. Ahora lo que te propongo que hagamos es hablar un poco sobre cómo algunas cuestiones que 
+            tenemos que tener presente a la hora de calcular: <br>
+            <ul class="conceptosApertura">
+                <li><strong>Tener en cuenta la valoración general</strong>: de nada sirve que calculemos 10 jugadas hacia adelante y diferentes variantes si estamos yendo a contra mano de la partida. Si podemos lograr como te explicaba en otros apartados, una valoración objetiva de la posición, vamos a poder encontrar un plan adecuado y calcular variantes de acurdo a ese plan y no "al tun tun", como suele decirse.</li>
+                <li><strong>Jugadas candidatas</strong>: este es un concepto clave en esto del cálculo. Antes de comenzar a calcular tenemos que detenernos un momento y, a muy groso modo, seleccionar algunas jugadas candidatas. Achicar el especttro de jugadas nos permitirá en principio evitar la tarea titánica de calcular todo, ahorrando tiempo y fuerzas. No tendría sentido que en una posición de ataque estemos calculando adelantar un peón del flanco contrario. No hay un número estipulado de jugadas candidatas, ya que depende mucho de qué tan compleja sea la posición, pero si pensamos que cada jugada irá abriendo un abánico de posibles continuaciones, entre 3 y 4 jugadas candidatas estaría bien, pero repito: no lo tomes como una ley.</li><br>
+                <li><strong>Ponernos en el lugar del rival</strong>: a menudo cuando recién empezamos a entender de qué se trata esto del cálculo, uno quizás tienda a calcular variantes solo moviendo nuestras piezas, lo cual no tiene ningún tipo de sentido dado que ante una jugada nuestra el rival debe jugar algo. ¡Pensemos que mientras calculamos el rival también está calculando! El escenario mental del cálculo debería ser algo similar a esto: "si juego mi torre acá, él puede mover su alfil acá, entonces yo presionaría con este peón por acá, y él se cubriría con su torre..."</li><br>
+                <li><strong>Primero calcular jugadas forzadas</strong>: en posiciones de ataque lo más aconsejable es que primero iniciemos el cálculo por aquellas jugadas en las que nuestro rival sólo tiene una respuesta posible, está "<strong>forzado</strong>" a jugar determinada respuesta dado que ante otra jugada perdería la partida. El calculo de estas variantes es mucho más lineal y rápido, dado que no tenemos que pensar distintas respuestas del rival.</li><br>
+                <li><strong>Pensar con la notación ajedrecística</strong>: si todavía no dominás el sistema de notación que se utiliza en ajedrez, es un buen momento para que te dirijas a <a href="#">este</a> apartado y lo repases. La realidad es que no hay ninguna ley que diga que tenemos que calcular pensando por ejemplo: "si juego b4 el alfil tiene que volver a d6" o cosas por el estilo, pero creeme que ayuda muchísimo a la hora de volver a traer jugadas a la cabeza. Pensá la siguiente situación: estoy calculando "jugar la torre acá", y en una continuación deduzco que "la dama acá amenaza mate". Luego calculo distintas variantes con sus subvariantes y me doy cuenta que aquella lejana primera jugada que calculé, tenía una variante que amenazaba mate y que me gustó. Ahora bien, ¿desde dónde amenazaba mate? Si mi cálculo hubiese sido algo como "torre a7 presionando en f7" y luego en la variante que me interesó "dama f1 amenazando mate en f7", recuperar esa secuencia en mi cabeza hubiese sido mucho más fácil.</li><br>
+                <li><strong>Quitar la vista del tablero unos instantes</strong>: cuando calculamos muchas variantes, caemos en un error que analizaremos en breve, que es la interferencia de la posición que tenemos ahora. Esto ocurre en variantes muy profundas donde se nos "cuela" una pieza que estamos viendo físicamente en el tablero pero que en nuestro análisis ya no estaría allí. Es aconsejable retirar la vista del tablero unos instantes, ¡creeme que después de hacerlo un par de veces vas a ver como la posición se refleja en tu cabeza!</li><br>
+            </ul>
+        </p>
+    </div>
+    <div>
+        <p>
+            Así como venimos haciendo en todas las secciones, te voy a contar ahora algunos de los errores típicos que se cometen a la hora de 
+            calcular. Tené en cuenta que a diferencia de los errores que veíamos antes, los errores en el cálculo le ocurren incluso a jugadores del 
+            más alto nivel, en menor medida que a aficionados como nosotros por supuesto, pero te cuento esto para que veas la profundidad de esto que 
+            estamos trabajando.
+            <ul>
+                <li><strong>Restringir las jugadas candidatas</strong>: si bien es cierto que es clave elegir ciertas jugadas porque calcular todo es absolutamente imposible, sería un error eliminar jugadas porque no amenacen nada en el acto. Muchas veces el cálculo se centra en jugadas que den jaques o amenacen mate en un futuro cercano. Mi consejo es que no tengas prisa por amenazar todo el tiempo.</li><br>
+                <li><strong>Pensar en una única respuesta del rival</strong>: un error muy frecuente, es creer que nuestra jugada tiene una única respuesta. A menudo hilamos muy fino entre nuestras posibilidades, pero a la hora de continuar con el cálculo tomamos sólo una jugada del rival. Deténgamonos a pensar un minuto: ¿si nosotros pensamos algunas jugadas candidatas, por qué nuestro oponente no habría de hacerlo? Por supuesto hay continuaciones forzadas que no requieren un cálculo tan profundo, pero a la hora de jugadas que no son forzadas, no podemos quedarnos con una sola respuesta del rival.</li><br>
+                <li><strong>Falta de profundidad en el cálculo</strong>: este es un error que particularmente me molesta mucho cometer. Te explico por qué: cometemos este error cuando abandonamos la variante que estamos calculando antes de tiempo. Podemos calcular 2 o 3 continuaciones y parece que no llega a nada, pero quizás esa cuarta continuación tenía la solución al problema. Habíamos escogido bien la jugada pero nos damos cuenta recién cuando analizamos la partida a posteriori.</li><br>
+                <li><strong>Tener en cuenta piezas que ya no están</strong>: ya hablamos de esto hace un rato. Es muy probable que cuando calculamos una variante muy profunda, las piezas físicas que tenemos en el tablero nos jueguen una mala pasada y olvidemos que en nuestro cálculo ya estarían en otra posición.</li><br>
+                <li><strong>No encontrar señales en la posición</strong>: antes de enfrascarnos en la tarea de calcular, ya dijimos que hay que hacer una valoración de la posición. A menudo el error no está tanto en el cálculo si no en esa valoración. En el ajedrez hay "señales" que nos indican el camino, si es que las sabemos interpretar. Por ejemplo una pieza sin defender es a menudo víctima de combinaciones, un rey mal protegido, una torre atrapada en la primera fila, etc. Tenemos que tener en cuenta esto a la hora de seleccionar las jugadas candidatas.</li><br>
+                <li><strong>Dar por sentada la victoria</strong>: un error brutal que suele costar la partida. Es posible que cuando ya tengamos la posición totalmente ganada, nos confiemos y dejemos de calcular como corresponde. Nunca hay que subestimar los recursos que pueda encontrar nuestro oponente.</li><br>
+
+            </ul>
+        </p>
+        <p>
+            Con los conceptos que te di y los errores frecuentes, ya tenés un buen panorama para empezar a calcular correctamente. Te voy a dejar 
+            un último consejo: si todavía no lo hacés, comenzá a anotar tus partidas para poder analizarlas posteriormente. El módulo de análisis de 
+            los tableros te va a resultar muy útil para chequear las jugadas que fuiste calculando y determinar si son buenas o no.
+        </p>
+    </div>
+    <link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css">
+    <script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+    <script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>
+</body>
+</html>
